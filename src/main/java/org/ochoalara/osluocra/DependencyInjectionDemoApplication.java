@@ -1,7 +1,6 @@
 package org.ochoalara.osluocra;
 
-import org.ochoalara.osluocra.services.HelloWorld;
-import org.ochoalara.osluocra.services.HelloWorldServiceEngImpl;
+import org.ochoalara.osluocra.controller.GreetingControllerInjectedByConstructor;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -12,11 +11,9 @@ public class DependencyInjectionDemoApplication {
 	public static void main(String[] args) {
 		ApplicationContext ctx= SpringApplication.run(DependencyInjectionDemoApplication.class, args);
 		 
-		 HelloWorld greeting = (HelloWorld) ctx.getBean("helloWorldServiceEngImpl");
+		 GreetingControllerInjectedByConstructor greeting = (GreetingControllerInjectedByConstructor) ctx.getBean("greetingControllerInjectedByConstructor");
 		 greeting.sayHello();
 		 
-		 greeting = (HelloWorld) ctx.getBean("helloWorldServiceSpaImpl");
-		 greeting.sayHello();
 	
 	}
 }
