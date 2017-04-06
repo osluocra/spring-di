@@ -1,20 +1,20 @@
 package org.ochoalara.osluocra.controller;
 
-import org.ochoalara.osluocra.services.HelloWorld;
+import org.ochoalara.osluocra.services.HelloWorldService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
 @Controller
 public class GreetingControllerInjectedByConstructor {
-		private HelloWorld helloWorld;
+		private HelloWorldService helloWorldService;
 		@Autowired
-		public GreetingControllerInjectedByConstructor(HelloWorld helloWorld) {
+		public GreetingControllerInjectedByConstructor(HelloWorldService helloWorldService) {
 			super();
-			this.helloWorld = helloWorld;
+			this.helloWorldService = helloWorldService;
 		}
 		
 		public void sayHello(){
-			helloWorld.sayHello();
+			helloWorldService.sayHello();
 		}
 		
 		

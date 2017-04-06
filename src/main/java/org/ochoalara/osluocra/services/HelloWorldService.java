@@ -1,5 +1,5 @@
 package org.ochoalara.osluocra.services;
 
-public interface HelloWorld {
+public interface HelloWorldService {
 	public void sayHello();
 }
